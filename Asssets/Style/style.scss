@@ -15,18 +15,19 @@
                 justify-content: space-between;
 
                 .main__nav--left {
-                    font-size: 12px;
+                    font-size: 11px;
                     font-weight: 300;
                     color: #323232b0;
                     outline: none;
                     scale: 1 1.02;
+                    text-shadow: 0 0 0 #32323277;
                 }
 
                 .main__nav--center {
                     display: flex;
                     justify-content: center;
                     gap: 27px;
-                    margin-right: 105px;
+                    margin-right: 54px;
 
                     .logo {
                         color: #323232;
@@ -35,8 +36,8 @@
                     }
 
                     .logo:hover {
-                        transition: 100ms;
-                        padding-top: 10px;
+                        transition: 650ms;
+                        transform: translateY(10px);
                     }
                 }
 
@@ -87,11 +88,15 @@
                         .slide__menu {
                             color: white;
                             text-decoration: none;
-                            padding: 0 15px;
+                            padding: 9px 15px;
                             font-size: 13px;
                             font-weight: 700;
                         }
-
+                        .slide__menu:hover{
+                            border-bottom: #FFCD05 3px solid ;
+                            transition: 100ms;
+                            transition-timing-function: ease-in-out;
+                        }
                         .icon {
                             cursor: pointer;
                             width: 162px;
