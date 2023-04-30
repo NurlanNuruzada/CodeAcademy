@@ -37,9 +37,10 @@
         </div>
         <div class="slide__container">
             <div class="main__slide">
-
-                <img class="main__slide--img" src="Asssets/img's/Programming_Web.jpg" alt="">
-                
+                    <img class=" mySlides main__slide--img" src="Asssets/img's/Programming_Web.jpg" alt="">
+                    <img class=" mySlides main__slide--img" src="Asssets/img's/Design_Web.jpg" alt="">
+                    <img class=" mySlides main__slide--img" src="Asssets/img's/Digital_Web.jpg" alt="">
+                    <img class=" mySlides main__slide--img" src="Asssets/img's/System_Web.jpg" alt="">
                 <div class="slide__hearder">
                     <div class="icon">
                         <img src="https://code.edu.az/wp-content/uploads/2021/09/logo-white.svg"
@@ -52,8 +53,44 @@
                         <a class="slide__menu " href="">Əlaqə</a>
                     </div>
                 </div>
+                <div class="click__conrainer">
+                    <div class="click__prev">
+                        <i  onclick="plusSlides(-1)" class="fa-solid fa-chevron-left prev" ></i>
+                    </div>
+                    <div class="click__next">
+                        <i onclick="plusSlides(1)" class="fa-solid fa-chevron-left fa-rotate-180 next"  ></i>
+                    </div>
+                </div>
             </div>
         </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
 </body>
 
 </html>

@@ -66,6 +66,18 @@
 * body .main .slide__container .main__slide {
   position: relative;
 }
+* body .main .slide__container .main__slide .click__conrainer {
+  position: absolute;
+  top: 350px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+* body .main .slide__container .main__slide .click__conrainer .click__prev, * body .main .slide__container .main__slide .click__conrainer .click__next {
+  font-size: 25px;
+  color: #f3f3f3;
+}
 * body .main .slide__container .main__slide .slide__hearder {
   display: flex;
   align-items: center;

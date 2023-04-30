@@ -76,6 +76,18 @@
 
                 .main__slide {
                     position: relative;
+                    .click__conrainer{
+                      position: absolute;
+                      top: 350px;
+                      display: flex;
+                      justify-content: space-between;
+                      width: 100%;
+                      padding: 20px;
+                      .click__prev , .click__next{
+                        font-size: 25px;
+                        color: #f3f3f3;
+                      }
+                    }
 
                     .slide__hearder {
                         display: flex;
